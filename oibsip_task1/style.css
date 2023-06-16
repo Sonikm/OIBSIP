@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #259D92;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 80%;
+    max-width: 800px;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background-color: #071522;
+    transition: all 0.4s ease;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fff;
+    height: 100%;
+}
+
+.display {
+    width: 100%;
+    height: 350px;
+    padding:1.5rem 2.5rem ;
+}
+
+.display .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end; 
+    height: 80%;
+}
+
+.content .input {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #605E63;
+    transition: all 0.2s;
+}
+
+.content .output {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #5CE978;
+    transition: all 0.2s;
+
+}
+
+.keys {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    overflow: hidden;
+    grid-gap: 10px;
+    padding: 1rem;
+    user-select: none;
+    margin-left: 20px;
+}
+
+.key {
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    max-width: 110px;
+    max-height: 100px;
+}
+
+.key:hover {
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    transition: all 0.2s ease;
+}
+
+.key span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+img {
+    width: 45px;
+    cursor: pointer;
+}
+
+.action span{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #5CE978;
+}
+
+.result span {
+    color: #fff;
+    font-size: 2.6rem;
+}
+
+.result {
+    background-color: #08966b !important;
+}
+
+.key:nth-child(1) {
+   margin-top: 4px;
+}
+
+/* || Dark and light mode theme */
+.toggle-btn {
+    width: 50px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #08966b;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #071522;
+    transition: all 0.4s ease;
+}
+
+.app.light-mode {
+    background-color: #fff;
+    transition: all 0.4s ease;
+}
+
+.calculator.light-mode {
+    color: #000;
+}
+
+.btn.light-mode {
+    background-color: #fff;
+    margin-left: 24px;
+    transition: all 0.4s ease;
+}
+
+.calculator.light-mode .key:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+/* || RESPONSIVENESS */
+
+@media screen and (max-width: 850px) {
+    .keys {
+      margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .app {
+        width: 90%;
+        height: 90vh;
+    }
+
+    .display {
+        height: 450px;
+    }
+
+    .key {
+        max-height: 80px;
+    }
+}
+
