@@ -1,0 +1,589 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;1,6..96,400&family=Caveat&family=Montserrat:wght@400;600;700&family=Nunito:wght@400;700&family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@0,400;1,200&family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: #fff;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* || UTILITY CLASS */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* || NAVIGATION */
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #222;
+  z-index: 22;
+  background-color: #000;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-inline: 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 28px;
+  font-family: "Caveat", cursive;
+  white-space: nowrap;
+}
+
+.nav-list {
+  justify-content: end;
+}
+
+li {
+  list-style-type: none;
+  padding: 20px 24px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding-bottom: 4px;
+  position: relative;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: #e17a6f;
+  transition: width 0.2s ease;
+}
+
+a:hover::after {
+  width: 100%;
+  transition: width 0.2s ease;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-inline: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* || HEADER SECTION */
+.header {
+  margin-top: 100px;
+}
+
+.hero-quote {
+  flex-direction: column;
+}
+
+.quote {
+  font-size: 45px;
+  text-align: center;
+}
+
+.hero-name {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.hero-img img {
+  width: 530px;
+}
+
+/* About section */
+.about {
+  background-color: #14171b;
+  border-radius: 20px;
+  padding: 40px 45px;
+  margin: 50px 0;
+  line-height: 20px;
+  word-spacing: 2px;
+}
+
+.about h2 {
+  font-size: 30px;
+  color: #e17a6f;
+}
+
+.about p {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.hr {
+  background-color: #757474;
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* || ACTING CAREER */
+.acting-career {
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+
+.acting-career h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.acting-career-timeline {
+  background-color: #191c22;
+  padding: 40px 45px;
+  border-radius: 20px;
+}
+
+.acting-career-timeline h3 {
+  color: #e17a6f;
+  padding-block: 15px 4px;
+  font-size: 25px;
+}
+
+.acting-career img {
+  border-radius: 20px;
+  border: 3px solid #e17a6f;
+  margin-bottom: 40px;
+}
+
+.acting-career-timeline p {
+  font-size: 14px;
+  color: #e3e0e0;
+  line-height: 18px;
+}
+
+/* || AWARDS */
+.awards {
+  position: relative;
+  width: 100%;
+  margin-block: 60px;
+}
+
+.awards h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+}
+
+.timeline::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  border-radius: 20px;
+  z-index: 2;
+  animation: timeline 7s linear 0.2s forwards;
+}
+
+.timeline-box {
+  width: 45%;
+  position: relative;
+  background-color: #191c22;
+  border-radius: 20px;
+  padding: 26px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  animation: timelineBox 1s linear forwards;
+  opacity: 0;
+}
+
+.timeline-box:nth-child(1) {
+  animation-delay: 0.2s;
+  transition: animation ease;
+}
+
+.timeline-box:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.timeline-box:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.timeline-box:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.timeline-box:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.timeline-box:nth-child(6) {
+  animation-delay: 5s;
+}
+
+.timeline-box:nth-child(7) {
+  animation-delay: 6s;
+}
+
+.timeline-box:nth-child(7) img,
+.timeline-box:nth-child(6) img,
+.timeline-box:nth-child(5) img {
+  height: 120px;
+}
+
+.timeline-box img {
+  width: 150px;
+
+  border-radius: 8px;
+  border: 3px solid #e17a6f;
+}
+
+.award-desc p {
+  font-size: 14px;
+  margin-block: 2px;
+  font-weight: 300;
+}
+
+.award-desc p span {
+  font-weight: 700;
+  padding: 2px 0;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.left-box {
+  left: 0;
+}
+
+.right-box {
+  left: 55%;
+}
+
+.left-box::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: -35px;
+  width: 15px;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #191c22;
+  z-index: -1;
+}
+
+.right-box::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -35px;
+  width: 15px;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #191c22;
+  z-index: -1;
+}
+
+.time {
+  background-color: #fff;
+  position: absolute;
+  right: -150px;
+  top: 28px;
+  color: #000;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  padding-top: 10px;
+  z-index: 2;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.left-time {
+  right: -160px;
+}
+
+.right-time {
+  left: -155px;
+}
+
+/* Awards Timeline Animations */
+
+@keyframes timeline {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes timelineBox {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* || MOVIES SECTION */
+
+.movies {
+  margin-block: 60px;
+}
+
+.movies h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.movies-list {
+  flex-flow: wrap;
+  gap: 25px;
+  background-color: #191c22;
+  border-radius: 20px;
+  padding: 50px 16px;
+}
+
+.movies-list img {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  border: 3px solid #e17a6f;
+}
+
+/* || FOOTER SECTION */
+footer {
+  background-color: #191c22;
+  padding: 25px;
+  text-align: center;
+}
+
+footer a {
+  color: #e17a6f;
+}
+
+/* .reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+} */
+
+#home,
+#about,
+#acting-career,
+#movies,
+#awards {
+  opacity: 0;
+}
+
+/* || RESPONSIVENESS */
+@media screen and (max-width: 950px) {
+  .container {
+    padding-inline: 35px;
+  }
+  .hero-quote {
+    flex-direction: column;
+  }
+
+  .quote {
+    font-size: 40px;
+  }
+
+  .hero-img img {
+    width: 400px;
+  }
+
+  /* Nav toggle bar */
+  .nav-list {
+    height: 350px;
+    width: 300px;
+    position: absolute;
+    background-color: #191c22;
+    flex-direction: column;
+    padding: 30px;
+    right: 0;
+    margin-top: 300px;
+    right: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    opacity: 0;
+  }
+
+  .nav-list.active {
+    opacity: 1;
+  }
+
+  .nav-container {
+    height: 70px;
+  }
+
+  .toggle-btn {
+    display: block;
+    z-index: 37;
+    padding: 10px 8px;
+  }
+
+  .toggle-btn i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-flow: column-reverse;
+    gap: 20px;
+  }
+
+  .timeline-box {
+    flex-flow: wrap;
+  }
+
+  .acting-career img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about h2 {
+    font-size: 20px;
+  }
+
+  .hero-img img {
+    width: 300px;
+  }
+
+  .quote {
+    font-size: 32px;
+  }
+
+  .hero-name {
+    font-size: 16px;
+  }
+
+  .about {
+    padding: 40px 30px;
+  }
+
+  .acting-career img {
+    width: 250px;
+  }
+
+  h2 {
+    font-size: 35px !important;
+  }
+
+  .acting-career-timeline {
+    padding: 30px;
+  }
+
+  .acting-career-timeline h3 {
+    font-size: 20px;
+  }
+
+  .timeline::after {
+    left: 10%;
+  }
+
+  .timeline-box {
+    width: 80%;
+  }
+
+  .left-box,
+  .right-box {
+    left: 20%;
+  }
+
+  .left-box::after,
+  .right-box::after {
+    left: -32px;
+    border-right: 20px solid #191c22;
+    border-left: 0;
+  }
+
+  .left-time,
+  .right-time {
+    left: 5%;
+    top: 25px;
+    width: 60px;
+    height: 40px;
+  }
+
+  .movies-list {
+    gap: 10px;
+  }
+
+  .movies-list img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .nav-list {
+    width: 95%;
+    height: 400px;
+    margin-top: 350px;
+    transition: all 0.4s ease;
+  }
+}
+
+@media screen and (max-width: 410px) {
+
+  .movies-list {
+    gap: 15px;
+  }
+
+  .movies-list img {
+    width: 200px;
+    height: 250px; 
+  }
+}
