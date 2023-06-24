@@ -1,0 +1,744 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;1,6..96,400&family=Caveat&family=Montserrat:wght@400;600;700&family=Nunito:wght@400;700&family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@0,400;1,200&family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #d3dbe6;
+  color: #000;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  height: 600px;
+  margin: 10px auto;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+}
+
+.left-container {
+  height: 100%;
+  width: 60%;
+  overflow: hidden;
+  background-color: #f4f5fc;
+  border-radius: 10px 0 0 10px;
+  padding: 20px 15px;
+  overflow: scroll;
+
+}
+
+.left-container .banner {
+  background-color: #49c3b9;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+}
+
+.greeting {
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.greeting h2 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.greeting input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  display: inline-block;
+  font-size: 30px;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 250px;
+ 
+}
+
+::placeholder {
+  color: #e6e3e3;
+  font-size: 30px;
+}
+
+.positive-quote .quote {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 10px;
+  width: 60%;
+
+}
+
+
+.banner img {
+  max-width: 40%;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+/* || MAIN-CONTAINER  */
+.main-container {
+  padding: 30px 10px;
+}
+
+.todo-heading {
+  justify-content: space-between;
+}
+
+.head h2 {
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.head p {
+  color: #848080;
+  white-space: nowrap;
+}
+
+.add-todo {
+  color: #085ffb;
+  background-color: #e2ebfa;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-todo span {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+/* calender */
+
+.calender {
+  width: 100%;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  margin-top: 30px;
+  /* padding: 20px; */
+  background-color: #fff;
+  padding: 20px 16px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.calender .month {
+  width: 100%;
+  color: #000;
+  justify-content: space-between;
+  padding-inline: 25px;
+  font-weight: 700;
+}
+
+.month .prev-month,
+.month .next-month {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.current-month {
+  white-space: nowrap;
+}
+
+.calender .hr {
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 1.2px;
+}
+
+.calender .weeks {
+  width: 100%;
+  color: #afafaf;
+  text-transform: uppercase;
+}
+
+.weeks .week {
+  font-size: 14px;
+  letter-spacing: 1px;
+  width: calc(44.2rem / 7);
+}
+
+.days {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+.day.inactive {
+  color: #aaa;
+}
+
+.day.active {
+  background-color: #085ffb;
+  border-radius: 50%;
+  box-shadow: 1px 1px 8px #62a4ffc7, -1px -1px 8px #62a4ffc7;
+}
+
+/* || RIGHT CONTAINER */
+
+.right-container {
+  width: 40%;
+  height: 100%;
+  background-color: #f9f9f9;
+  background-image: url("images/b366e3f673337af139d18b2783609911.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  padding: 20px 15px;
+  overflow-y: scroll;
+}
+
+.show-option {
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px 16px;
+  border-radius: 8px;
+  flex-flow: nowrap;
+}
+
+.show-option .show {
+  color: #afafaf;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.show-option .show span {
+  color: #fff;
+  background-color: #d9d9d9;
+  border-radius: 40%;
+  display: inline-block;
+  padding: 0 6px;
+  font-size: 12px;
+}
+
+
+.show-option .all-todos.active,
+.show-option .new-todos.active,
+.show-option .completed-todos.active {
+  color: #085ffb;
+  
+}
+
+.show-option .all-todos span.active,
+.show-option .new-todos span.active,
+.show-option .completed-todos span.active {
+  background-color: #085ffb;
+}
+
+.show-option .show span::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: #d9d9d9;
+  position: absolute;
+  right: -10px;
+  cursor: auto;
+}
+
+.show:nth-child(3) span::after {
+  display: none;
+}
+
+/*  || All todo list */
+
+.todo-list {
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+  flex-direction: column-reverse;
+}
+
+.todo-list .todo-item {
+  background-color: #fff;
+  padding: 16px 20px;
+  width: 100%;
+  border-radius: 10px;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.todo-list .todo-item .todo-content {
+  justify-content: space-between;
+}
+
+.content p {
+  font-size: 16px;
+  padding-block: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 150px;
+}
+
+.content p.checked {
+  text-decoration: line-through;
+  color: #979797;
+}
+
+.content {
+  gap: 10px;
+  width: 160px;
+  justify-content: flex-start;
+}
+
+.edit-delete {
+  color: #fff;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-delete button {
+  background-color: #6e62e5;
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  color: #fff;
+}
+
+/* Checkbox design */
+input[type="checkbox"] + label {
+  display: block;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\2714";
+  border: 0.1em solid #85adf2;
+  box-shadow: 0px 0px 8px #e2ebfa, -0px -0px 8px #e2ebfa;
+  border-radius: 50%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  transition: 0.2s;
+}
+
+input[type="checkbox"] + label:active:before {
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked + label:before {
+  border-color: #c8f5a6;
+  color: #000;
+  background-color: #b7cef7;
+}
+
+/* || CREATE TODO */
+.popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: montserrat, sans-serif;
+  z-index: -3;
+  transition: background 0.2s ease;
+}
+
+.create-todo {
+  background-color: #f4f5fc;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  padding: 18px 25px;
+  position: relative;
+  display: none;
+  transition: all 0.4s ease;
+}
+
+/*------------- Show and hide pupup box --------------*/
+.popup-container.show-popup {
+  background-color: #000000b7 !important;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+}
+
+.create-todo.show-popup {
+  display: block;
+  z-index: 24;
+  transition: all 0.4s ease;
+}
+
+/* ------------------------------------------------ */
+
+.create-todo h2 {
+  font-size: 25px;
+  color: #252525;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.close-popup {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #848080;
+  cursor: pointer;
+}
+
+.new-todo-form {
+  padding: 20px 0;
+}
+
+.new-todo-form h4 {
+  color: #848080;
+  font-size: 18px;
+}
+
+.new-todo-form input {
+  margin-block: 16px 30px;
+  padding: 16px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #4f4f4f;
+}
+
+.new-todo-form input::placeholder {
+  font-size: 16px;
+  color: #afafaf;
+}
+
+/* ....................Category options...................... */
+
+.categories {
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px 10px 40px;
+}
+
+.category {
+  gap: 10px;
+  position: relative;
+}
+
+input[type="radio"] {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  accent-color: #6e62e5;
+  position: absolute;
+  left: 1px;
+  top: -15px;
+  opacity: 0;
+}
+
+/* For more decoration radio btn */
+.bubble {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6e62e5;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #8479f8;
+}
+
+input[type="radio"]:checked ~ .bubble::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: #6e62e5;
+  cursor: pointer;
+}
+
+/* ..................................................... */
+
+.actions {
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.actions button {
+  width: 50%;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 18px;
+  background-color: #6e62e5;
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+}
+
+.actions button.inactive {
+  display: none;
+}
+
+.actions button:hover {
+  background-color: #8479f8;
+  transition: background 0.2s ease;
+}
+
+/* ---------------------------------------------------- */
+.todo-item .hr {
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 1.2px;
+  margin-block: 5px;
+}
+
+.todo-list .todo-item .date {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 5px;
+  font-size: 14px;
+  color: #848080;
+}
+
+/* || SHOW LEFT AND RIGHT SLIDE */
+.show-list {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #edf3fd;
+  box-shadow: 2px 2px 12px #a2c4f5b4, -2px -2px 12px #a2c4f5b4;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 60px;
+  opacity: 0;
+  color: #085FFB;
+}
+
+/* || RESPONSIVENESS */
+@media screen and (max-width: 830px)
+ {
+
+  body {
+    background-color: #F4F5FC;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    background-color: #F4F5FC;
+    box-shadow: none;
+
+  }
+
+  .days .day {
+    padding-block: 15px;
+  }
+  
+  .calender {
+    margin-top: 50px;
+  }
+
+  .content p {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .add-todo {
+    margin-top: -20px;
+  }
+
+  .content {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .show-list {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .left-container {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .right-container {
+    display: none;
+  }
+
+  .left-container.inactive {
+    display: none;
+  }
+
+  .right-container.active {
+    display: block;
+    width: 100%;
+    padding-inline: 30px 20px;
+    border-radius: 0;
+  }
+
+  .content {
+    width: 100%;
+  } 
+
+  .content p{
+    width: 280px;
+  } 
+
+
+
+  .add-todo {
+    margin-top: 0;
+  }
+  
+  .weeks .week {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 500px)  {
+
+  .greeting input, .greeting h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 28px;
+  }
+
+  .head h2 {
+    font-size: 26px;
+  }
+
+  ::placeholder {
+    font-size: 28px;
+  }
+
+  .content p {
+    width: 200px;
+  } 
+}
+
+@media screen and (max-width: 410px)  {
+
+  .right-container.active{
+    padding-inline: 18px 0;
+
+  }
+
+  .left-container .banner {
+    height: 110px;
+  }
+
+  .content p {
+    width: 120px;
+  } 
+
+  .positive-quote .quote {
+    display: none;
+  }
+
+  .greeting  {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .greeting input {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 200px;
+    font-size: 25px;
+  }
+
+  ::placeholder {
+    font-size: 28px;
+  }
+
+  .todo-heading  {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 45px;
+  }
+
+  .todo-heading .head h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .add-todo {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding: 10px;
+  }
+
+  .weeks .week {
+    font-size: 14px; 
+    letter-spacing: 0;
+  }
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <script
+      src="https://kit.fontawesome.com/f5c8e13b2d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      
+        <!--|| LEFT CONTAINER  -->
+      <div class="left-container">
+        <!-- Quote Banner -->
+        <div class="banner">
+          <div class="positive-quote">
+            <div class="greeting flex">
+              <h2>Hello!</h2>
+              <input type="text" name="name" id="name" placeholder="Your name..." spellcheck="false">
+            </div>
+            <div class="quote">
+              "Embrace the power of focus. With every task crossed off, your path to success becomes clearer." ✨
+            </div>
+          </div>
+
+     
+          <img
+            src="images/vecteezy_girl-with-laptop-sitting-and-freelance-or-studying-concept_ (1).png"
+            alt=""
+          />
+        </div>
+
+        <div class="main-container">
+          <div class="todo-heading flex">
+            <div class="head">
+              <h2>Today's To-Do</h2>
+              <p class="current-date">Wednesday , 11 May</p>
+            </div>
+            <div class="add-todo flex"><span>+</span> New Todo</div>
+          </div>
+
+          <!-- || CALENDER -->
+
+          <div class="calender flex">
+            <div class="month flex">
+              <span class="prev-month icon" id="prev"> &gt; </span>
+              <span class="current-month">March 2023</span>
+              <span class="next-month icon" id="next"> &lt; </span>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="weeks flex">
+              <div class="week flex">SUN</div>
+              <div class="week flex">MON</div>
+              <div class="week flex">TUE</div>
+              <div class="week flex">WED</div>
+              <div class="week flex">THU</div>
+              <div class="week flex">FRI</div>
+              <div class="week flex">SAT</div>
+            </div>
+
+            <div class="days">
+              <!-- <div class="day inactive">28</div>
+              <div class="day inactive">29</div>
+              <div class="day inactive">30</div>
+              <div class="day inactive">31</div>
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <div class="day">4</div>
+              <div class="day">5</div>
+              <div class="day">6</div>
+              <div class="day">7</div>
+              <div class="day">8</div>
+              <div class="day">9</div>
+              <div class="day">10</div>
+              <div class="day active">11</div>
+              <div class="day">12</div>
+              <div class="day">13</div>
+              <div class="day">14</div>
+              <div class="day">15</div>
+              <div class="day">16</div>
+              <div class="day">17</div>
+              <div class="day">18</div>
+              <div class="day">19</div>
+              <div class="day">20</div>
+              <div class="day">21</div>
+              <div class="day">22</div>
+              <div class="day">23</div>
+              <div class="day">24</div>
+              <div class="day">25</div>
+              <div class="day">26</div>
+              <div class="day">27</div>
+              <div class="day">28</div>
+              <div class="day">29</div>
+              <div class="day">30</div>
+              <div class="day inactive">1</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- || RIGHT CONTAINER -->
+
+      <div class="right-container">
+        <div class="show-option flex">
+          <div class="all-todos show active">
+            All <span class="active">12</span>
+          </div>
+          <div class="new-todos show">New <span>4</span></div>
+          <div class="completed-todos show">Completed <span>6</span></div>
+        </div>
+
+        <div class="todo-list flex">
+           <!-- All todo list will insert inside this div -->
+        </div>
+      </div>
+    </div>
+
+    <!-- || SHOW POPUP BOX -->
+    <div class="popup-container flex">
+      <div class="create-todo">
+        <h2>CREATE A TODO</h2>
+
+        <div class="close-popup"><i class="fa-solid fa-xmark"></i></div>
+
+        <form class="new-todo-form">
+          <h4>What's on your todo list 📝</h4>
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="e.g. make a video"
+            autofocus
+            spellcheck="false"
+          />
+
+          <h4>Pick a category 🎯</h4>
+          <div class="categories flex">
+            <label for="home" class="category flex">
+              <input type="radio" name="home" id="category1" value="home" />
+              <div class="bubble flex home"></div>
+              <span>Home</span>
+            </label>
+
+            <label for="work" class="category flex">
+              <input type="radio" name="home" id="category2" value="work" />
+              <div class="bubble flex work"></div>
+              <span>Work</span>
+            </label>
+
+            <label for="other" class="category flex">
+              <input type="radio" name="home" id="category3" value="other" />
+              <div class="bubble flex other"></div>
+              <span>Other</span>
+            </label>
+          </div>
+
+          <div class="actions flex">
+            <button class="save">Save</button>
+            <button class="update inactive">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="show-list flex">&gt;</div>
+
+    <script src="main.js"></script>
+    <script src="calender.js"></script>
+  </body>
+</html>
