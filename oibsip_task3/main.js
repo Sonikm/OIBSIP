@@ -120,6 +120,7 @@ saveTodo.addEventListener ('click', (e)=> {
         closePopup.click();
         showTodoList();
         countTodosList();
+        updateThroughtCheckBoxBtn();
 
         leftContainer.classList.add('inactive');
         rightContainer.classList.add('active')
@@ -169,6 +170,7 @@ function showTodoList()
     })
     todoItem.innerHTML = list;
     markCheckedAndUnchecked()
+    updateThroughtCheckBoxBtn()
 }
 showTodoList();
 
@@ -180,6 +182,7 @@ function deleteData(index){
     allTodos.click();
     showTodoList();
     countTodosList();
+    updateThroughtCheckBoxBtn()
 }
 
 // ------------------------UPDATE DATA------------------------------
@@ -219,13 +222,13 @@ updateTodo.addEventListener('click', (e)=>{
     showTodoList();
     closePopup.click();
     countTodosList();
+    updateThroughtCheckBoxBtn()
     }
 })
 
 // ------------|| MARKS AS A COMPLETEDED TODO----------------------
 function setCompletedTodos(index, elem){
     let todoList = getCrudData();
-
     elem.classList.toggle('checked')
     todoList[index].check = elem.classList.contains('checked') ? 'checked' : '';
 
@@ -245,6 +248,7 @@ let allTodos = document.querySelector('.all-todos'),
       showTodoList();
       countTodosList();
       showCurrentTodoList(allTodos)
+      updateThroughtCheckBoxBtn()
 
  })
 
@@ -263,6 +267,7 @@ newTodos.addEventListener('click', ()=>{
     markCheckedAndUnchecked()
     countTodosList()
     showCurrentTodoList(newTodos)
+    updateThroughtCheckBoxBtn()
 })  
 
 
@@ -282,6 +287,7 @@ completedTodos.addEventListener('click', ()=>{
     markCheckedAndUnchecked()
     countTodosList();
     showCurrentTodoList(completedTodos)
+    updateThroughtCheckBoxBtn()
 })
 
 
@@ -366,8 +372,7 @@ function countTodosList(){
  let userName = document.getElementById('name');
 
  userName.addEventListener('keyup', ()=>{
-     value = userName.value;
-     localStorage.setItem('name', value);
+     localStorage.setItem('name', userName.value);
      printName();
  })
  
@@ -379,3 +384,27 @@ function countTodosList(){
  printName();
    
 
+// -------------------------------------------------------
+
+//Mark as completed after clicking on checkbox button
+function updateThroughtCheckBoxBtn ()
+{
+    
+let checkboxBtn = document.querySelectorAll(".content input");
+
+checkboxBtn.forEach((elem, index) =>{
+    elem.addEventListener('click', ()=>{
+        let todoList = getCrudData();
+
+        if(elem.checked)
+        {
+            todoList[index].check = 'checked';
+        }
+        else {
+            todoList[index].check = '';
+        }
+        setCrudData(todoList);
+        countTodosList();
+    })
+})
+}
